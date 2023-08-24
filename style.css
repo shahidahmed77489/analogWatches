@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.watch-round {
+  background-image: url(./images/rounded.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.watch-smart {
+  background-image: url(./images/png.png);
+  height: 495px;
+  width: 495px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: white;
+  position: relative;
+}
+#hour {
+  display: inline-block;
+  border: 4px solid rgb(10 20 45);
+  width: 12px;
+  height: 110px;
+  position: absolute;
+  top: 140px;
+  left: 48.59%;
+  transform-origin: bottom;
+}
+#hour::before {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 18px double rgb(10 20 45);
+  top: -17px;
+  position: absolute;
+  right: -8px;
+}
+#minute {
+  display: inline-block;
+  border: 2px solid rgb(10 20 45);
+  width: 10px;
+  height: 167px;
+  position: absolute;
+  top: 84px;
+  left: 48.8%;
+  transform-origin: bottom;
+}
+#minute::before {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 18px double rgb(10 20 45);
+  top: -18px;
+  position: absolute;
+  right: -7px;
+}
+#second {
+  display: inline-block;
+  background-color: red;
+  border: 0.5px solid red;
+  width: 4px;
+  height: 210px;
+  position: absolute;
+  top: 40px;
+  left: 49.4%;
+  transform-origin: bottom;
+}
+#second::before {
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 15px solid red;
+  top: -8px;
+  position: absolute;
+  right: -6px;
+}
+#round {
+  height: 30px;
+  width: 30px;
+  background: #eaae36;
+  border-radius: 50%;
+  position: absolute;
+  top: 51%;
+  left: 49.8%;
+  transform: translate(-50%, -50%);
+}
+#dateArea {
+  padding: 2px;
+  background-color: transparent;
+  position: absolute;
+  right: 18%;
+  top: 48%;
+  color: red;
+  font-size: 20px;
+}
+#dateAreaa {
+  width: 21%;
+  position: absolute;
+  top: 48%;
+  padding: 2px 0px 2px 9px;
+  background-color: transparent;
+  right: 16%;
+  color: rgb(10 20 45);
+  font-size: 20px;
+  box-shadow: 1px 2px 5px 2px #cdbcbc;
+  font-family: sans-serif;
+}
+.imgg {
+  position: absolute;
+  bottom: 10%;
+  left: 19%;
+  width: 55%;
+}
+.heading {
+  display: none;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .watch-smart {
+    width: 291px;
+    height: 291px;
+  }
+  .heading {
+    display: block;
+  }
+  .imgg img {
+    width: 183px;
+    position: absolute;
+    bottom: 0px;
+    left: 3px;
+  }
+  #round {
+    height: 25px;
+    width: 25px;
+  }
+  #hour {
+    height: 67px;
+    top: 83px;
+    left: 47.8%;
+  }
+  #minute {
+    height: 90px;
+    top: 58px;
+    left: 48%;
+  }
+  #second {
+    height: 125px;
+    top: 23px;
+    left: 49%;
+  }
+  #dateArea {
+    right: 41px;
+    font-size: 17px;
+    position: absolute;
+    top: 47.5%;
+  }
+  #dateAreaa {
+    width: 67px;
+    right: 39px;
+    font-size: 13px;
+    position: absolute;
+    bottom: 45%;
+  }
+  .heading {
+    position: absolute;
+    bottom: 22px;
+    font-size: 21px;
+    background-color: rgb(205 168 56);
+    border-radius: 5px;
+    padding: 1px 5px;
+    color: #fcf9f0;
+  }
+}
